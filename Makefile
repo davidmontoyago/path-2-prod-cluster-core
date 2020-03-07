@@ -9,7 +9,7 @@ helm:
 
 flux:
 	$(HELM) repo add fluxcd https://charts.fluxcd.io
-	kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/master/deploy/flux-helm-release-crd.yaml
+	kubectl apply -f https://raw.githubusercontent.com/fluxcd/helm-operator/master/deploy/crds.yaml
 	kubectl create namespace flux --dry-run -o=yaml | kubectl apply -f -
 
 core:
